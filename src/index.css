@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Optional: global font */
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f9fafb; /* light gray */
+}
+
+
+/* Hide scrollbar (still scrollable) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
