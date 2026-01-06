@@ -5,13 +5,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-orange-600 text-white shadow-md">
+    <nav className="w-full bg-orange-500 text-white shadow-md">
       <div className="w-full px-6 md:px-12 py-4 flex justify-between items-center">
         
         {/* Brand / Logo */}
         <Link
           to="/"
-          className="text-2xl font-bold tracking-wide"
+          className="text-2xl font-bold tracking-wide p-8"
         >
           R.K. Traders
         </Link>
