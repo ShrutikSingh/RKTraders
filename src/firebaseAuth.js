@@ -1,11 +1,9 @@
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { initializeApp } from "firebase/app";
-import { firebaseConfig } from "./firebase";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { auth } from "./firebase";
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-
+// 🔐 Admin login
 export const loginAdmin = (email, password) =>
   signInWithEmailAndPassword(auth, email, password);
 
+// 🔓 Logout
 export const logoutAdmin = () => signOut(auth);

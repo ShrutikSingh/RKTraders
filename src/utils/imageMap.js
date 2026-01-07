@@ -1,11 +1,12 @@
-import cement from "../assets/images/cement.jpg";
-import bars from "../assets/images/bars.jpg";
+import cement from "../assets/images/cement.png";
+import bars from "../assets/images/bars.png";
 import bricks from "../assets/images/bricks.jpg";
-import sand from "../assets/images/sand.jpg";
+import placeholder from "../assets/images/placeholder.png";
+
 
 export const imageMap = {
   cement,
   bars,
   bricks,
-  sand,
+  placeholder,
 };

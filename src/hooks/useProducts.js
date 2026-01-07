@@ -1,10 +1,26 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
+import { useEffect, useState } from "react";
 import { db } from "../firebase";
 
-export const getProducts = async () => {
-  const snapshot = await getDocs(collection(db, "products"));
-  return snapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data(),
-  }));
-};
+export default function useProducts() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(
+      collection(db, "products"),
+      (snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProducts(data);
+        setLoading(false);
+      }
+    );
+
+    return () => unsubscribe();
+  }, []);
+
+  return { products, loading };
+}
