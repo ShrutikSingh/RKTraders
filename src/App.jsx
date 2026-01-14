@@ -4,6 +4,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
+import FloatingButtons from "./components/FloatingButtons";
+
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -42,6 +44,7 @@ function App() {
 
       {/* Show Footer only on public pages */}
       {!isAdminRoute && <Footer />}
+      {!isAdminRoute && <FloatingButtons />}
     </>
   );
 }
