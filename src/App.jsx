@@ -19,6 +19,10 @@ function App() {
   // Check if current route is admin
   const isAdminRoute = location.pathname.startsWith("/admin");
 
+  // Hide footer on specific public routes (About, Contact)
+  const footerHiddenRoutes = ["/about", "/contact"];
+  const showFooter = !isAdminRoute && !footerHiddenRoutes.includes(location.pathname);
+
   return (
     <>
       {/* Show Navbar only on public pages */}
@@ -42,8 +46,8 @@ function App() {
         />
       </Routes>
 
-      {/* Show Footer only on public pages */}
-      {!isAdminRoute && <Footer />}
+      {/* Show Footer only on selected public pages */}
+      {showFooter && <Footer />}
       {!isAdminRoute && <FloatingButtons />}
     </>
   );

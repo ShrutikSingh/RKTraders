@@ -1,15 +1,14 @@
 const Footer = () => {
-    return (
-      <div className="bg-orange-500 text-white h-25">
-        <div className="mx-auto text-center">
-          <h3 className="text-xl font-semibold">R.K. Traders</h3>
-          <p className="text-sm opacity-90">
-            © {new Date().getFullYear()} R.K. Traders. All rights reserved.
-          </p>
-        </div>
+  return (
+    <footer className="border-t border-orange-100 bg-white/90">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-xs text-slate-400 md:px-8">
+        <p className="text-[11px] tracking-[0.25em] uppercase text-orange-500">
+          R.K. Traders
+        </p>
+        <p>© {new Date().getFullYear()} R.K. Traders. All rights reserved.</p>
       </div>
-    );
-  };
-  
-  export default Footer;
-  
+    </footer>
+  );
+};
+
+export default Footer;

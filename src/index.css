@@ -14,10 +14,17 @@ body,
   min-height: 100vh;
 }
 
-/* Optional: global font */
+html,
 body {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Global typography */
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   background-color: #f9fafb; /* light gray */
+  color: #020617; /* slate-950 */
 }
 
 

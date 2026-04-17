@@ -18,10 +18,10 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-orange-50">
+    <div className="flex min-h-screen items-center justify-center bg-orange-50 px-4">
       <form
         onSubmit={handleLogin}
-        className="bg-white p-8 rounded-2xl shadow-lg w-80"
+        className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-lg"
       >
         <h2 className="text-2xl font-semibold mb-6 text-center">
           Admin Login

@@ -15,26 +15,15 @@ const Home = () => {
     );
   }
 
-  // Split products into two galleries (example logic)
-  const gallery1 = products.slice(0, Math.ceil(products.length / 2));
-  const gallery2 = products.slice(Math.ceil(products.length / 2));
+  // Single unified gallery showing all products
+  const allProducts = products;
 
   return (
-    <>
+    <main className="pb-10 pt-0 bg-white">
       <Hero />
-
-      <ProductGallery
-        title="Construction Essentials"
-        products={gallery1}
-      />
-
-      <ProductGallery
-        title="Building Materials"
-        products={gallery2}
-      />
-
+      <ProductGallery title="Our Products" products={allProducts} />
       <ContactSection />
-    </>
+    </main>
   );
 };
 
